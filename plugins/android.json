@@ -1,0 +1,110 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "call-number": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "com.synconset.imagepicker": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-apprate": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "826720427470540",
+      "APP_NAME": "Ion2FullApp",
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-googleplus": {
+      "PLAY_SERVICES_VERSION": "11.8.0",
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-ionic": {
+      "APP_ID": "066dd7ce",
+      "CHANNEL_NAME": "Production",
+      "UPDATE_API": "https://api.ionicjs.com",
+      "UPDATE_METHOD": "background",
+      "MAX_STORE": "2",
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "net.hyroglf.light"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "net.hyroglf.light"
+    }
+  }
+}

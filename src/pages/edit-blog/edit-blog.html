@@ -1,0 +1,83 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+          
+        <ion-title> Edit Post</ion-title>
+      </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item class="top-banner">
+        Lorem ipsum dolor sit amet
+    </ion-item>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label color="primary"> Title </ion-label>
+      <ion-input type="text" [(ngModel)]="post.title.rendered" name="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary"> Source URL </ion-label>
+      <ion-textarea [(ngModel)]="post.source_url" name="source_url"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary"> Source Name </ion-label>
+      <ion-textarea [(ngModel)]="post.source_name" name="source_name"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary"> Source Author </ion-label>
+      <ion-textarea [(ngModel)]="post.source_author" name="source_author"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="post.date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary"> Summery </ion-label>
+      <ion-textarea [(ngModel)]="post.content.rendered" name="content"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <button ion-button (click)="selectImage()" full color="primary"> Select Photo</button>
+      </ion-item>
+
+      <ion-item>
+        <img src="{{ myphoto }}" />
+      </ion-item>
+
+    <ion-item>
+      <ion-label> Categories </ion-label>
+      <select-searchable 
+          [isMultiple]="true"
+          item-content
+          [(ngModel)]="category"
+          [items]="categories"
+          itemValueField="id"
+          itemTextField="name"
+          [canSearch]="true"
+          (onChange)="categoryChange($event)">
+          <ng-template ionicSelectableValueTemplate let-categories="value">
+            <div class="ionic-selectable-value-item" *ngFor="let category of categories">
+                {{ category.name }}
+            </div>
+        </ng-template>
+      </select-searchable>
+  </ion-item>
+
+    <ion-toolbar>
+      <button class="create-comment" ion-button block (click)="updatePost(post, category)"> Update Post</button>
+     </ion-toolbar>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-menu [content]="content" [swipeEnabled]="false">
+  <ion-content class="menu-content">
+    <ion-list class="menu-list">
+      <button ion-item detail-none (click)="openPage()">
+        <ion-icon name="home" item-left></ion-icon>
+        Home
+
+        <!-- <ion-buttons *ngIf="loggedUser && page.title == 'Home'" end>
+            {{ displayName }} | Logout 
+            <button ion-button icon-only (click)="logOut()">
+              <ion-icon class="toolbar-icon" name="log-out"></ion-icon>
+            </button>
+          </ion-buttons> -->
+
+      </button>
+      <!-- <button ion-item detail-none *ngFor="let page of pushPages" (click)="pushPage(page)">
+        <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>
+        {{page.title}}
+      </button> -->
+
+      <ion-buttons *ngIf="loggedUser" end>
+          Welcome, {{ displayName }} | Logout 
+          <button ion-button icon-only (click)="logOut()">
+            <ion-icon class="toolbar-icon" name="log-out"></ion-icon>
+          </button>
+        </ion-buttons>
+
+        <ion-buttons *ngIf="!loggedUser" end>
+          <button ion-button icon-only (click)="goToLogin()">
+            <ion-icon class="toolbar-icon" name="log-in"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      <button ion-item detail-none *ngFor="let category of categories" 
+      (click)="gotoCategoryPage(category)">
+      <ion-icon *ngIf="category.icon" name="{{category.icon}}" item-left></ion-icon>
+        {{category.name}}
+      </button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>

@@ -1,0 +1,45 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var VgEvents = (function () {
+    function VgEvents() {
+    }
+    VgEvents.VG_ABORT = 'abort';
+    VgEvents.VG_CAN_PLAY = 'canplay';
+    VgEvents.VG_CAN_PLAY_THROUGH = 'canplaythrough';
+    VgEvents.VG_DURATION_CHANGE = 'durationchange';
+    VgEvents.VG_EMPTIED = 'emptied';
+    VgEvents.VG_ENCRYPTED = 'encrypted';
+    VgEvents.VG_ENDED = 'ended';
+    VgEvents.VG_ERROR = 'error';
+    VgEvents.VG_LOADED_DATA = 'loadeddata';
+    VgEvents.VG_LOADED_METADATA = 'loadedmetadata';
+    VgEvents.VG_LOAD_START = 'loadstart';
+    VgEvents.VG_PAUSE = 'pause';
+    VgEvents.VG_PLAY = 'play';
+    VgEvents.VG_PLAYING = 'playing';
+    VgEvents.VG_PROGRESS = 'progress';
+    VgEvents.VG_RATE_CHANGE = 'ratechange';
+    VgEvents.VG_SEEK = 'seek';
+    VgEvents.VG_SEEKED = 'seeked';
+    VgEvents.VG_SEEKING = 'seeking';
+    VgEvents.VG_STALLED = 'stalled';
+    VgEvents.VG_SUSPEND = 'suspend';
+    VgEvents.VG_TIME_UPDATE = 'timeupdate';
+    VgEvents.VG_VOLUME_CHANGE = 'volumechange';
+    VgEvents.VG_WAITING = 'waiting';
+    VgEvents.VG_LOAD = 'load';
+    VgEvents.VG_ENTER = 'enter';
+    VgEvents.VG_EXIT = 'exit';
+    VgEvents.VG_START_ADS = 'startads';
+    VgEvents.VG_END_ADS = 'endads';
+    VgEvents.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    VgEvents.ctorParameters = function () { return []; };
+    return VgEvents;
+}());
+exports.VgEvents = VgEvents;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmctZXZlbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsidmctZXZlbnRzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsc0NBQXlDOzs7O3dCQUlYLE9BQU87MkJBQ0osU0FBUzttQ0FDRCxnQkFBZ0I7a0NBQ2pCLGdCQUFnQjswQkFDeEIsU0FBUzs0QkFDUCxXQUFXO3dCQUNmLE9BQU87d0JBQ1AsT0FBTzs4QkFDRCxZQUFZO2tDQUNSLGdCQUFnQjs2QkFDckIsV0FBVzt3QkFDaEIsT0FBTzt1QkFDUixNQUFNOzBCQUNILFNBQVM7MkJBQ1IsVUFBVTs4QkFDUCxZQUFZO3VCQUNuQixNQUFNO3lCQUNKLFFBQVE7MEJBQ1AsU0FBUzswQkFDVCxTQUFTOzBCQUNULFNBQVM7OEJBQ0wsWUFBWTtnQ0FDVixjQUFjOzBCQUNwQixTQUFTO3VCQUVaLE1BQU07d0JBQ0wsT0FBTzt1QkFDUixNQUFNOzRCQUVELFVBQVU7MEJBQ1osUUFBUTs7Z0JBaEN2QyxpQkFBVTs7OzttQkFGWDs7QUFHYSw0QkFBUSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7SW5qZWN0YWJsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBJbmplY3RhYmxlKClcbmV4cG9ydCBjbGFzcyBWZ0V2ZW50cyB7XG4gICAgc3RhdGljIFZHX0FCT1JUOiBzdHJpbmcgPSAnYWJvcnQnO1xuICAgIHN0YXRpYyBWR19DQU5fUExBWTogc3RyaW5nID0gJ2NhbnBsYXknO1xuICAgIHN0YXRpYyBWR19DQU5fUExBWV9USFJPVUdIOiBzdHJpbmcgPSAnY2FucGxheXRocm91Z2gnO1xuICAgIHN0YXRpYyBWR19EVVJBVElPTl9DSEFOR0U6IHN0cmluZyA9ICdkdXJhdGlvbmNoYW5nZSc7XG4gICAgc3RhdGljIFZHX0VNUFRJRUQ6IHN0cmluZyA9ICdlbXB0aWVkJztcbiAgICBzdGF0aWMgVkdfRU5DUllQVEVEOiBzdHJpbmcgPSAnZW5jcnlwdGVkJztcbiAgICBzdGF0aWMgVkdfRU5ERUQ6IHN0cmluZyA9ICdlbmRlZCc7XG4gICAgc3RhdGljIFZHX0VSUk9SOiBzdHJpbmcgPSAnZXJyb3InO1xuICAgIHN0YXRpYyBWR19MT0FERURfREFUQTogc3RyaW5nID0gJ2xvYWRlZGRhdGEnO1xuICAgIHN0YXRpYyBWR19MT0FERURfTUVUQURBVEE6IHN0cmluZyA9ICdsb2FkZWRtZXRhZGF0YSc7XG4gICAgc3RhdGljIFZHX0xPQURfU1RBUlQ6IHN0cmluZyA9ICdsb2Fkc3RhcnQnO1xuICAgIHN0YXRpYyBWR19QQVVTRTogc3RyaW5nID0gJ3BhdXNlJztcbiAgICBzdGF0aWMgVkdfUExBWTogc3RyaW5nID0gJ3BsYXknO1xuICAgIHN0YXRpYyBWR19QTEFZSU5HOiBzdHJpbmcgPSAncGxheWluZyc7XG4gICAgc3RhdGljIFZHX1BST0dSRVNTOiBzdHJpbmcgPSAncHJvZ3Jlc3MnO1xuICAgIHN0YXRpYyBWR19SQVRFX0NIQU5HRTogc3RyaW5nID0gJ3JhdGVjaGFuZ2UnO1xuICAgIHN0YXRpYyBWR19TRUVLOiBzdHJpbmcgPSAnc2Vlayc7XG4gICAgc3RhdGljIFZHX1NFRUtFRDogc3RyaW5nID0gJ3NlZWtlZCc7XG4gICAgc3RhdGljIFZHX1NFRUtJTkc6IHN0cmluZyA9ICdzZWVraW5nJztcbiAgICBzdGF0aWMgVkdfU1RBTExFRDogc3RyaW5nID0gJ3N0YWxsZWQnO1xuICAgIHN0YXRpYyBWR19TVVNQRU5EOiBzdHJpbmcgPSAnc3VzcGVuZCc7XG4gICAgc3RhdGljIFZHX1RJTUVfVVBEQVRFOiBzdHJpbmcgPSAndGltZXVwZGF0ZSc7XG4gICAgc3RhdGljIFZHX1ZPTFVNRV9DSEFOR0U6IHN0cmluZyA9ICd2b2x1bWVjaGFuZ2UnO1xuICAgIHN0YXRpYyBWR19XQUlUSU5HOiBzdHJpbmcgPSAnd2FpdGluZyc7XG4gICAgXG4gICAgc3RhdGljIFZHX0xPQUQ6IHN0cmluZyA9ICdsb2FkJztcbiAgICBzdGF0aWMgVkdfRU5URVI6IHN0cmluZyA9ICdlbnRlcic7XG4gICAgc3RhdGljIFZHX0VYSVQ6IHN0cmluZyA9ICdleGl0JztcblxuICAgIHN0YXRpYyBWR19TVEFSVF9BRFM6IHN0cmluZyA9ICdzdGFydGFkcyc7XG4gICAgc3RhdGljIFZHX0VORF9BRFM6IHN0cmluZyA9ICdlbmRhZHMnO1xufVxuIl19

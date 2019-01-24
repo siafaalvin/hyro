@@ -1,0 +1,37 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Registration</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <ion-item>
+        <span *ngIf="success" style="color:green">{{ success }}</span>
+        <span *ngIf="error_message" style="color:red">{{ error_message }}</span>
+      </ion-item>
+      
+      <form class="login-form auth-form">
+          <ion-item>
+            <ion-input type="text" placeholder="Username" [(ngModel)]="user.username" name="username" required></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-input type="text" placeholder="Email" [(ngModel)]="user.email" name="email" required></ion-input>
+            </ion-item>
+          <show-hide-container>
+            <ion-item>
+              <ion-input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" show-hide-input required></ion-input>
+            </ion-item>
+          </show-hide-container>
+      
+      
+          <button ion-button block class="auth-action-button login-button" 
+          type="submit" type="submit" (click)="register(user)">Register</button>
+          
+        </form>
+  
+  </ion-content>  

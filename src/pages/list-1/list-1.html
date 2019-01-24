@@ -1,0 +1,86 @@
+<ion-header class="listing-header">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div class="header-logo">Hyroglf</div>
+    </ion-title>
+  </ion-navbar>
+
+  <ion-searchbar
+    (ionInput)="getPosts($event)"
+    [(ngModel)]="searchQuery"
+    hideCancelButton="true"
+    autocomplete="on"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  
+</ion-header>
+
+<ion-content class="list-big-content">
+
+    <ion-item class="top-banner">
+        Lorem ipsum dolor sit amet
+    </ion-item>
+    
+  <ion-item>
+      <ion-label> Sort </ion-label>
+      <ion-select [(ngModel)]="sort" (ionChange)="sortPost()">
+        <ion-option value="0"> Newest to Oldest </ion-option>
+        <ion-option value="1"> Oldest to Newest </ion-option>
+      </ion-select>
+    </ion-item>
+
+  <div class="list-big">
+    <ion-list>
+      <ion-col class="list-item" ion-item *ngFor="let item of items">
+          <ion-row no-padding class="content-row">
+              <!-- <ion-col no-padding width-33 class="item-avatar"> -->
+                <!-- <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image> -->
+              <!-- </ion-col> -->
+    
+              <ion-thumbnail item-start>
+                  <!-- <img [src]="item._embedded.author[0].name"> -->
+                <img *ngIf="item.featured_media > 0" 
+                [src]="item._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url"/>
+              </ion-thumbnail>
+    
+              <ion-col no-padding width-57 class="item-content">
+                <h3 class="item-title">{{item.title.rendered}}</h3> <br/>
+                <span class="item-title"> {{item.date | date: 'dd/MM/yyyy'}} at {{item.date | date: 'hh:mm a'}} </span>
+                <!-- <p class="item-description" rows="3" [innerHTML]="item.excerpt.rendered"></p> -->
+                <br/>
+                <p> <span *ngFor="let category of item._embedded['wp:term'][0]"> 
+                  <u> {{ category.name }} </u> &nbsp; </span> </p>
+                  <br/>
+                <span> By <u> {{ item._embedded.author[0].name }} </u></span> &nbsp; 
+                <button class="action-button" ion-button clear small color="danger" 
+                (click)="sharePost(item)">
+                  <ion-icon name='share-alt'></ion-icon>
+                </button>
+                <!-- <span> <ion-icon name="share" (click)="shareIt(item)"></ion-icon> </span> -->
+    
+                <!-- <span> {{ item._embedded.featuredmedia[0].href }} </span> -->
+                <!-- <img src="{{ item._embedded['wp:featuredmedia'][0].source_url }}"> -->
+                <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->
+              </ion-col>
+
+              
+
+              <ion-col no-padding width-10 class="item-icon">
+                <ion-icon name="arrow-forward" ></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+    </ion-list>
+  </div>
+
+  <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="loadMorePosts($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>
