@@ -52,6 +52,7 @@
     "bourbon": "5.0.0",
     "call-number": "~0.0.2",
     "com-badrit-base64": "^0.2.0",
+    "com.synconset.imagepicker": "~2.1.8",
     "cordova-admob-sdk": "^0.18.0",
     "cordova-android": "6.3.0",
     "cordova-ios": "4.5.5",
@@ -101,6 +102,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.2.1",
+    "@ionic/lab": "1.0.24",
     "typescript": "2.4.2"
   },
   "cordovaPlugins": [
